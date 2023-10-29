@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchor" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background.css" stylesheets="@../../../css/game.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.game.ZankController">
+   <children>
+      <Label fx:id="playerTurn" layoutX="14.0" layoutY="48.0" prefHeight="21.0" prefWidth="147.0" text="Firstplayer" textAlignment="CENTER" textFill="#fcfcfc">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Label>
+      <MenuBar fx:id="menuBar" layoutX="-4.0" prefHeight="25.0" prefWidth="594.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu fx:id="game" mnemonicParsing="false" text="Spiel">
+              <items>
+                <MenuItem fx:id="saveGame" mnemonicParsing="false" onAction="#saveGameHandler" text="Speichern" />
+                  <MenuItem fx:id="exitGame" mnemonicParsing="false" onAction="#exitGameHandler" text="Beenden" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Spieloptionen">
+               <items>
+                  <MenuItem fx:id="undo" mnemonicParsing="false" onAction="#undoHandler" text="Undo" />
+                  <MenuItem fx:id="redo" mnemonicParsing="false" text="Redo" />
+                  <MenuItem fx:id="pass" mnemonicParsing="false" onAction="#passHandler" text="Passen" />
+                  <MenuItem fx:id="tipp" mnemonicParsing="false" onAction="#tippHandler" text="Tipp anzeigen" />
+                  <MenuItem fx:id="solution" mnemonicParsing="false" onAction="#solutionHandler" text="Lösung vorspielen" />
+               </items></Menu>
+            <Menu fx:id="music" mnemonicParsing="false" text="Musik">
+              <items>
+                <MenuItem fx:id="startMusic" mnemonicParsing="false" onAction="#startMusicHandler" text="Abspielen" />
+                  <MenuItem fx:id="stopMusic" mnemonicParsing="false" onAction="#stopMusicHandler" text="Stoppen" />
+              </items>
+            </Menu>
+         </menus></MenuBar>
+   </children>
+</AnchorPane>
